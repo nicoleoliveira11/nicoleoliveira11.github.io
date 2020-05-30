@@ -1,0 +1,310 @@
+        * {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: #e0e0e0 repeat-x;
+    font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
+/*logotipo do site*/
+
+.logo {
+    display: block;
+    background-color: #e0e0e0;
+}
+
+.principal {
+    padding-left: 5%;
+    padding-top: 7%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.maintitulo {
+    color: #053d3f;
+}
+
+.articlesust {
+    width: 150%;
+    float: left;
+}
+
+.titulossecaoesquerda {
+    color: #053d3f;
+    padding-top: 1%;
+}
+
+.secaoesquerda {
+    text-align: left;
+    margin-left: 3%;
+    margin-right: 40%;
+    text-align: justify;
+    font-size: 20px;
+    padding-top: 1%;
+}
+
+
+/*menus pagina grande*/
+
+.menu {
+    list-style: none;
+    float: left;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+
+.menu ul {
+    list-style: none;
+    position: relative;
+}
+
+.menu ul li {
+    width: 150px;
+    float: left;
+}
+
+
+/*hiperlinks do menu*/
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    background-color: #e0e0e0;
+    color: #127175;
+    font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+    padding-top: 35px;
+}
+
+.menu a:hover {
+    border-top: 3px solid #127175;
+}
+
+
+/*menu tb*/
+
+.cabecalho {
+    color: #053d3f;
+    display: absolute;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/*div dos textos-margem laterais*/
+
+.textos {
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+/*legendas das imagens das páginas*/
+
+.legendas {
+    text-align: center;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+}
+
+
+/*personalização da tag p dos textos*/
+
+.paragrafos {
+    color: rgb(0, 0, 0);
+    text-align: justify;
+    font-size: 18px;
+}
+
+
+/*section das páginas*/
+
+.sessoes {
+    color: #053d3f;
+    display: absolute;
+    text-align: justify;
+    padding: 20px;
+}
+
+
+/*icones perto do rodapé*/
+
+.caixinhasbot {
+    display: flex;
+    text-decoration: none;
+    text-align: center;
+    background-color: #e0e0e0;
+    font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+    justify-content: center;
+    width: 100%;
+}
+
+.caixinha {
+    padding: 20px;
+}
+
+.vermais a {
+    text-decoration: none;
+    color: #127175
+}
+
+.vermais a:hover {
+    border-top: 3px solid #127175;
+}
+
+
+/*footer*/
+
+.rodape {
+    display: absolute;
+    text-align: center;
+    padding: 20px;
+    background-color: #127175;
+    font-size: 14px;
+    font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+    color: #e0e0e0;
+}
+
+
+/*posição das imagens*/
+
+.container {
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container img {
+    -webkit-transition: .2s ease;
+    transition: .2s ease;
+}
+
+.container:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+
+/*config do botão para dropdown*/
+
+label[for="bt_menu"] {
+    padding: 3px;
+    color: #127175;
+    font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    height: 35px;
+    width: 40px;
+}
+
+#bt_menu {
+    display: none;
+}
+
+label[for="bt_menu"] {
+    display: none;
+}
+
+
+/*config para telas menores*/
+
+@media(max-width:1150px) {
+    label[for="bt_menu"] {
+        display: block;
+    }
+    #bt_menu:checked~.menu {
+        margin-left: 0;
+    }
+    .menu {
+        margin-top: 4px;
+        margin-left: -100%;
+        transition: all .4s;
+        display: block;
+    }
+    .menu ul li {
+        width: 100%;
+        float: none;
+    }
+    .logo {
+        text-align: center;
+        position: relative;
+    }
+    /*tudo dos textos*/
+    .cabecalho {
+        color: #053d3f;
+        display: absolute;
+        text-align: justify;
+        padding: 20px;
+    }
+    .paragrafos {
+        color: rgb(0, 0, 0);
+    }
+    .textos {
+        margin: auto;
+    }
+    .legendas {
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+    }
+    .sessoes {
+        color: #053d3f;
+        display: absolute;
+        text-align: justify;
+        padding: 20px;
+    }
+    /*tudo relacionado as imagens*/
+    .container {
+        max-width: 1080px;
+        width: 100%;
+        height: auto;
+    }
+    .container img {
+        max-width: 500px;
+        width: 100%;
+        max-height: 500px;
+        min-height: auto;
+        background-size: 100%;
+        background-repeat: no-repeat;
+    }
+    /*icones perto do rodapé*/
+    .caixinhasbot {
+        display: absolute;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+        justify-content: center;
+        font-size: 12px;
+        width: 100%;
+    }
+    .caixinha {
+        font-size: 20px;
+        justify-content: center;
+        text-align: center;
+        display: absolute;
+    }
+    .vermais a {
+        text-decoration: none;
+        color: #127175
+    }
+    .vermais a:hover {
+        border-top: 3px solid #127175;
+    }
+    /*rodapé*/
+    .rodape {
+        display: absolute;
+        text-align: center;
+        padding: 20px;
+        background-color: #12717c;
+        font-size: 14px;
+        font-family: "roboto condensed", Arial, Helvetica, sans-serif;
+        color: #e0e0e0;
